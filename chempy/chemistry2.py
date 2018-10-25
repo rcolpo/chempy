@@ -1169,8 +1169,8 @@ def balance_stoichiometry(reactants, products, substances=None,
     )
 
     _intersect = set.intersection(*map(set, (reactants, products)))
-    if _intersect:
-        raise ValueError("Substances on both sides: %s" % str(_intersect))
+    #if _intersect:
+    #    raise ValueError("Substances on both sides: %s" % str(_intersect))
     if substances is None:
         substances = OrderedDict([(k, substance_factory(k)) for k in chain(reactants, products)])
     if isinstance(substances, str):
